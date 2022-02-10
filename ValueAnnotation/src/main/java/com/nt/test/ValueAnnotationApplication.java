@@ -8,16 +8,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 import com.nt.bean.Hospital;
 
 @SpringBootApplication
-public class BootPractice04ValueAnnotationApplication {
+public class ValueAnnotationApplication {
 
-	public static void main(String[] args) 
-	{
-		ApplicationContext ctx=SpringApplication.run(BootPractice04ValueAnnotationApplication.class, args);
-		Hospital hospital=ctx.getBean("hosp",Hospital.class);
-		System.out.println("Spring Bean Class Object Data" +hospital);
+	public static void main(String[] args) {
+		ApplicationContext ctx=SpringApplication.run(ValueAnnotationApplication.class, args);
 		
+		Hospital hospital=ctx.getBean("hsptl",Hospital.class);
+		System.out.println("Spring Bean Class Object" +hospital);
 		
 		((ConfigurableApplicationContext)ctx).close();
 	}
-	
+
 }

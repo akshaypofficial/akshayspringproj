@@ -9,7 +9,7 @@ import lombok.Data;
 
 
 
-@Component("hsptll")
+@Component("hosp")
 @Data
 public class Hospital 
 {
